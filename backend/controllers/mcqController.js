@@ -1,47 +1,170 @@
+ const mongoose = require("mongoose");
 const MCQ = require("../models/MCQ");
 
-// Helper: Teacher केवल अपने MCQ manage करेगा.
-// Admin सभी MCQ manage कर सकता है.
-const canManageMCQ = async (mcq, user) => {
+// Helper: Validate MongoDB ObjectId
+const isValidId = (id) => {
+  return mongoose.isValidObjectId(id);
+};
+
+// Helper: Teacher only manages own MCQs.
+// Admin manages all MCQs.
+const canManageMCQ = (mcq, user) => {
   if (!mcq || !user) return false;
 
   if (user.role === "admin") return true;
 
   return (
     user.role === "teacher" &&
-    mcq.createdBy.toString() === user.userId
+    mcq.createdBy &&
+    String(mcq.createdBy) === String(user.userId)
   );
 };
 
-// 1. Student: Chapter के Published MCQ प्राप्त करना
-// सही उत्तर और Explanation इस API में नहीं भेजेंगे.
+// Helper: Validate MCQ data
+const validateMCQData = (data, isUpdate = false) => {
+  if (!isUpdate) {
+    if (!data.chapterId || !isValidId(data.chapterId)) {
+      return "Valid Chapter ID is required.";
+    }
+
+    if (!data.question || !data.question.trim()) {
+      return "Question is required.";
+    }
+
+    if (
+      !Array.isArray(data.options) ||
+      data.options.length !== 4 ||
+      data.options.some(
+        option =>
+          typeof option !== "string" ||
+          !option.trim()
+      )
+    ) {
+      return "Exactly 4 non-empty options are required.";
+    }
+
+    if (
+      !Number.isInteger(data.correctAnswer) ||
+      data.correctAnswer < 0 ||
+      data.correctAnswer > 3
+    ) {
+      return "Correct answer must be between 0 and 3.";
+    }
+  }
+
+  if (
+    isUpdate &&
+    data.chapterId !== undefined &&
+    !isValidId(data.chapterId)
+  ) {
+    return "Invalid Chapter ID.";
+  }
+
+  if (
+    isUpdate &&
+    data.question !== undefined &&
+    (typeof data.question !== "string" || !data.question.trim())
+  ) {
+    return "Question cannot be empty.";
+  }
+
+  if (
+    isUpdate &&
+    data.options !== undefined &&
+    (
+      !Array.isArray(data.options) ||
+      data.options.length !== 4 ||
+      data.options.some(
+        option =>
+          typeof option !== "string" ||
+          !option.trim()
+      )
+    )
+  ) {
+    return "Exactly 4 non-empty options are required.";
+  }
+
+  if (
+    isUpdate &&
+    data.correctAnswer !== undefined &&
+    (
+      !Number.isInteger(data.correctAnswer) ||
+      data.correctAnswer < 0 ||
+      data.correctAnswer > 3
+    )
+  ) {
+    return "Correct answer must be between 0 and 3.";
+  }
+
+  if (
+    data.language !== undefined &&
+    !["Hindi", "English"].includes(data.language)
+  ) {
+    return "Language must be Hindi or English.";
+  }
+
+  if (
+    data.displayOrder !== undefined &&
+    (
+      !Number.isInteger(data.displayOrder) ||
+      data.displayOrder < 1
+    )
+  ) {
+    return "Display order must be a positive integer.";
+  }
+
+  return null;
+};
+
+// 1. Student: Get Published MCQs
 exports.getPublishedMCQs = async (req, res) => {
   try {
+    const { chapterId } = req.params;
+
+    if (!isValidId(chapterId)) {
+      return res.status(400).json({
+        success: false,
+        message: "Invalid Chapter ID."
+      });
+    }
+
     const mcqs = await MCQ.find({
-      chapterId: req.params.chapterId,
+      chapterId,
       isPublished: true
     })
       .select("question options language displayOrder")
-      .sort({ displayOrder: 1, createdAt: 1 });
+      .sort({ displayOrder: 1, createdAt: 1 })
+      .lean();
 
-    res.status(200).json({
+    return res.status(200).json({
       success: true,
+      total: mcqs.length,
       data: mcqs
     });
+
   } catch (error) {
-    res.status(500).json({
+    console.error("Get Published MCQs:", error.message);
+
+    return res.status(500).json({
       success: false,
-      message: error.message
+      message: "Unable to fetch MCQs."
     });
   }
 };
 
-// 2. Teacher/Admin: Manage MCQ List
+// 2. Teacher/Admin: Manage MCQs
 exports.getManageMCQs = async (req, res) => {
   try {
     const filter = {};
 
     if (req.query.chapterId) {
+      if (!isValidId(req.query.chapterId)) {
+        return res.status(400).json({
+          success: false,
+          message: "Invalid Chapter ID."
+        });
+      }
+
       filter.chapterId = req.query.chapterId;
     }
 
@@ -53,14 +176,18 @@ exports.getManageMCQs = async (req, res) => {
       .populate("chapterId", "title")
       .sort({ createdAt: -1 });
 
-    res.status(200).json({
+    return res.status(200).json({
       success: true,
+      total: mcqs.length,
       data: mcqs
     });
+
   } catch (error) {
-    res.status(500).json({
+    console.error("Manage MCQs:", error.message);
+
+    return res.status(500).json({
       success: false,
-      message: error.message
+      message: "Unable to fetch MCQs."
     });
   }
 };
@@ -68,6 +195,22 @@ exports.getManageMCQs = async (req, res) => {
 // 3. Create MCQ
 exports.createMCQ = async (req, res) => {
   try {
+    const errorMessage = validateMCQData(req.body);
+
+    if (errorMessage) {
+      return res.status(400).json({
+        success: false,
+        message: errorMessage
+      });
+    }
+
+    if (!isValidId(req.user.userId)) {
+      return res.status(401).json({
+        success: false,
+        message: "Invalid user identity."
+      });
+    }
+
     const {
       chapterId,
       question,
@@ -78,31 +221,10 @@ exports.createMCQ = async (req, res) => {
       displayOrder
     } = req.body;
 
-    if (
-      !chapterId ||
-      !question ||
-      !Array.isArray(options) ||
-      options.length !== 4 ||
-      options.some(
-        option =>
-          typeof option !== "string" ||
-          !option.trim()
-      ) ||
-      !Number.isInteger(correctAnswer) ||
-      correctAnswer < 0 ||
-      correctAnswer > 3
-    ) {
-      return res.status(400).json({
-        success: false,
-        message:
-          "Question, Chapter, four options and valid correctAnswer (0-3) are required."
-      });
-    }
-
     const mcq = await MCQ.create({
       chapterId,
-      question,
-      options,
+      question: question.trim(),
+      options: options.map(option => option.trim()),
       correctAnswer,
       explanation,
       language,
@@ -110,13 +232,18 @@ exports.createMCQ = async (req, res) => {
       createdBy: req.user.userId
     });
 
-    res.status(201).json({
+    return res.status(201).json({
       success: true,
-      message: "MCQ created successfully",
+      message: "MCQ created successfully.",
       data: mcq
     });
+
   } catch (error) {
-    res.status(500).json({
+    console.error("Create MCQ:", error.message);
+
+    return res.status(
+      error.name === "ValidationError" ? 400 : 500
+    ).json({
       success: false,
       message: error.message
     });
@@ -126,19 +253,37 @@ exports.createMCQ = async (req, res) => {
 // 4. Update MCQ
 exports.updateMCQ = async (req, res) => {
   try {
-    const mcq = await MCQ.findById(req.params.mcqId);
+    const { mcqId } = req.params;
+
+    if (!isValidId(mcqId)) {
+      return res.status(400).json({
+        success: false,
+        message: "Invalid MCQ ID."
+      });
+    }
+
+    const mcq = await MCQ.findById(mcqId);
 
     if (!mcq) {
       return res.status(404).json({
         success: false,
-        message: "MCQ not found"
+        message: "MCQ not found."
       });
     }
 
-    if (!(await canManageMCQ(mcq, req.user))) {
+    if (!canManageMCQ(mcq, req.user)) {
       return res.status(403).json({
         success: false,
-        message: "Not authorized"
+        message: "Not authorized to update this MCQ."
+      });
+    }
+
+    const errorMessage = validateMCQData(req.body, true);
+
+    if (errorMessage) {
+      return res.status(400).json({
+        success: false,
+        message: errorMessage
       });
     }
 
@@ -160,13 +305,18 @@ exports.updateMCQ = async (req, res) => {
 
     await mcq.save();
 
-    res.status(200).json({
+    return res.status(200).json({
       success: true,
-      message: "MCQ updated successfully",
+      message: "MCQ updated successfully.",
       data: mcq
     });
+
   } catch (error) {
-    res.status(400).json({
+    console.error("Update MCQ:", error.message);
+
+    return res.status(
+      error.name === "ValidationError" ? 400 : 500
+    ).json({
       success: false,
       message: error.message
     });
@@ -176,34 +326,47 @@ exports.updateMCQ = async (req, res) => {
 // 5. Publish / Unpublish MCQ
 exports.togglePublishMCQ = async (req, res) => {
   try {
-    const mcq = await MCQ.findById(req.params.mcqId);
+    const { mcqId } = req.params;
+
+    if (!isValidId(mcqId)) {
+      return res.status(400).json({
+        success: false,
+        message: "Invalid MCQ ID."
+      });
+    }
+
+    const mcq = await MCQ.findById(mcqId);
 
     if (!mcq) {
       return res.status(404).json({
         success: false,
-        message: "MCQ not found"
+        message: "MCQ not found."
       });
     }
 
-    if (!(await canManageMCQ(mcq, req.user))) {
+    if (!canManageMCQ(mcq, req.user)) {
       return res.status(403).json({
         success: false,
-        message: "Not authorized"
+        message: "Not authorized."
       });
     }
 
     mcq.isPublished = !mcq.isPublished;
+
     await mcq.save();
 
-    res.status(200).json({
+    return res.status(200).json({
       success: true,
       message: mcq.isPublished
-        ? "MCQ published successfully"
-        : "MCQ unpublished successfully",
+        ? "MCQ published successfully."
+        : "MCQ unpublished successfully.",
       data: mcq
     });
+
   } catch (error) {
-    res.status(500).json({
+    console.error("Toggle Publish MCQ:", error.message);
+
+    return res.status(500).json({
       success: false,
       message: error.message
     });
@@ -213,67 +376,90 @@ exports.togglePublishMCQ = async (req, res) => {
 // 6. Delete MCQ
 exports.deleteMCQ = async (req, res) => {
   try {
-    const mcq = await MCQ.findById(req.params.mcqId);
+    const { mcqId } = req.params;
+
+    if (!isValidId(mcqId)) {
+      return res.status(400).json({
+        success: false,
+        message: "Invalid MCQ ID."
+      });
+    }
+
+    const mcq = await MCQ.findById(mcqId);
 
     if (!mcq) {
       return res.status(404).json({
         success: false,
-        message: "MCQ not found"
+        message: "MCQ not found."
       });
     }
 
-    if (!(await canManageMCQ(mcq, req.user))) {
+    if (!canManageMCQ(mcq, req.user)) {
       return res.status(403).json({
         success: false,
-        message: "Not authorized"
+        message: "Not authorized."
       });
     }
 
     await mcq.deleteOne();
 
-    res.status(200).json({
+    return res.status(200).json({
       success: true,
-      message: "MCQ deleted successfully"
+      message: "MCQ deleted successfully."
     });
+
   } catch (error) {
-    res.status(500).json({
+    console.error("Delete MCQ:", error.message);
+
+    return res.status(500).json({
       success: false,
       message: error.message
     });
   }
 };
 
-// 7. Student: Submit Quiz and Get Result
+// 7. Student: Submit Quiz
 exports.submitQuiz = async (req, res) => {
   try {
     const { chapterId, answers } = req.body;
 
-    if (
-      !chapterId ||
-      !Array.isArray(answers) ||
-      answers.length === 0
-    ) {
+    if (!chapterId || !isValidId(chapterId)) {
       return res.status(400).json({
         success: false,
-        message: "Chapter and answers are required."
+        message: "Valid Chapter ID is required."
       });
     }
 
-    const submittedIds = answers.map(item => item.questionId);
+    if (!Array.isArray(answers) || answers.length === 0) {
+      return res.status(400).json({
+        success: false,
+        message: "Answers are required."
+      });
+    }
 
     if (
-      answers.some(
-        item =>
-          !item.questionId ||
-          !Number.isInteger(item.selectedAnswer) ||
-          item.selectedAnswer < 0 ||
-          item.selectedAnswer > 3
-      ) ||
-      new Set(submittedIds).size !== submittedIds.length
+      answers.some(item =>
+        !item ||
+        !isValidId(item.questionId) ||
+        !Number.isInteger(item.selectedAnswer) ||
+        item.selectedAnswer < 0 ||
+        item.selectedAnswer > 3
+      )
     ) {
       return res.status(400).json({
         success: false,
-        message: "Invalid or duplicate answers."
+        message: "Invalid question ID or selected answer."
+      });
+    }
+
+    const submittedIds = answers.map(
+      item => String(item.questionId)
+    );
+
+    if (new Set(submittedIds).size !== submittedIds.length) {
+      return res.status(400).json({
+        success: false,
+        message: "Duplicate question answers are not allowed."
       });
     }
 
@@ -291,13 +477,19 @@ exports.submitQuiz = async (req, res) => {
     }
 
     const mcqMap = new Map(
-      mcqs.map(mcq => [mcq._id.toString(), mcq])
+      mcqs.map(mcq => [
+        mcq._id.toString(),
+        mcq
+      ])
     );
 
     let score = 0;
 
     const results = answers.map(item => {
-      const mcq = mcqMap.get(item.questionId);
+      const mcq = mcqMap.get(
+        String(item.questionId)
+      );
+
       const isCorrect =
         mcq.correctAnswer === item.selectedAnswer;
 
@@ -314,25 +506,30 @@ exports.submitQuiz = async (req, res) => {
       };
     });
 
-    res.status(200).json({
+    const totalQuestions = mcqs.length;
+
+    return res.status(200).json({
       success: true,
-      message: "Quiz submitted successfully",
+      message: "Quiz submitted successfully.",
       result: {
-        totalQuestions: mcqs.length,
+        totalQuestions,
         attempted: answers.length,
         correct: score,
         incorrect: answers.length - score,
         score,
         percentage: Number(
-          ((score / mcqs.length) * 100).toFixed(2)
+          ((score / totalQuestions) * 100).toFixed(2)
         ),
         results
       }
     });
+
   } catch (error) {
-    res.status(500).json({
+    console.error("Submit Quiz:", error.message);
+
+    return res.status(500).json({
       success: false,
-      message: error.message
+      message: "Unable to submit quiz."
     });
   }
 };
