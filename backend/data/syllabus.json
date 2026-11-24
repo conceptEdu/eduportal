@@ -1,0 +1,2339 @@
+[
+  {
+    "classNumber": 1,
+    "subjects": [
+      {
+        "key": "math",
+        "name": "गणित / Mathematics",
+        "chapters": [
+          {
+            "title": "आकृतियाँ और स्थान / Finding the Furry Cat",
+            "chapterNumber": 1
+          },
+          {
+            "title": "संख्याएँ 1 से 9 / Numbers 1-9",
+            "chapterNumber": 2
+          },
+          {
+            "title": "जोड़ और घटाव / Addition & Subtraction",
+            "chapterNumber": 3
+          },
+          {
+            "title": "माप और समय / Measurement & Time",
+            "chapterNumber": 4
+          }
+        ]
+      },
+      {
+        "key": "hindi",
+        "name": "हिन्दी (Hindi)",
+        "chapters": [
+          {
+            "title": "मीना का परिवार",
+            "chapterNumber": 1,
+            "book": "सारंगी"
+          },
+          {
+            "title": "दादा-दादी",
+            "chapterNumber": 2,
+            "book": "सारंगी"
+          },
+          {
+            "title": "रीना का घर",
+            "chapterNumber": 3,
+            "book": "सारंगी"
+          },
+          {
+            "title": "पतंग",
+            "chapterNumber": 4,
+            "book": "सारंगी"
+          }
+        ]
+      },
+      {
+        "key": "english",
+        "name": "अंग्रेज़ी (English)",
+        "chapters": [
+          {
+            "title": "Two Little Hands",
+            "chapterNumber": 1,
+            "book": "Mridang"
+          },
+          {
+            "title": "Greetings",
+            "chapterNumber": 2,
+            "book": "Mridang"
+          },
+          {
+            "title": "Picture Time",
+            "chapterNumber": 3,
+            "book": "Mridang"
+          },
+          {
+            "title": "The Cap-seller",
+            "chapterNumber": 4,
+            "book": "Mridang"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "classNumber": 2,
+    "subjects": [
+      {
+        "key": "math",
+        "name": "गणित / Mathematics",
+        "chapters": [
+          {
+            "title": "संख्याओं का खेल / Numbers 1-99",
+            "chapterNumber": 1
+          },
+          {
+            "title": "आकृतियों का कमाल / Shapes Around Us",
+            "chapterNumber": 2
+          },
+          {
+            "title": "पैसे का हिसाब / Money",
+            "chapterNumber": 3
+          }
+        ]
+      },
+      {
+        "key": "hindi",
+        "name": "हिन्दी (Hindi)",
+        "chapters": [
+          {
+            "title": "नीमा की दादी",
+            "chapterNumber": 1,
+            "book": "सारंगी"
+          },
+          {
+            "title": "घर",
+            "chapterNumber": 2,
+            "book": "सारंगी"
+          },
+          {
+            "title": "तितली",
+            "chapterNumber": 3,
+            "book": "सारंगी"
+          },
+          {
+            "title": "भालू का बच्चा",
+            "chapterNumber": 4,
+            "book": "सारंगी"
+          }
+        ]
+      },
+      {
+        "key": "english",
+        "name": "अंग्रेज़ी (English)",
+        "chapters": [
+          {
+            "title": "Welcome to School",
+            "chapterNumber": 1,
+            "book": "Mridang"
+          },
+          {
+            "title": "Picture Reading",
+            "chapterNumber": 2,
+            "book": "Mridang"
+          },
+          {
+            "title": "It is Fun",
+            "chapterNumber": 3,
+            "book": "Mridang"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "classNumber": 3,
+    "subjects": [
+      {
+        "key": "math",
+        "name": "गणित / Mathematics",
+        "chapters": [
+          {
+            "title": "कहाँ से देखें / Where to Look From",
+            "chapterNumber": 1
+          },
+          {
+            "title": "संख्याओं की उछलकूद / Fun with Numbers",
+            "chapterNumber": 2
+          },
+          {
+            "title": "देने लेने का खेल / Give and Take",
+            "chapterNumber": 3
+          },
+          {
+            "title": "लंबा और छोटा / Long and Short",
+            "chapterNumber": 4
+          }
+        ]
+      },
+      {
+        "key": "evs",
+        "name": "पर्यावरण अध्ययन / EVS",
+        "chapters": [
+          {
+            "title": "डाल-डाल पर, ताल-ताल पर / Poonam's Day Out",
+            "chapterNumber": 1
+          },
+          {
+            "title": "पौधों की परी / The Plant Fairy",
+            "chapterNumber": 2
+          },
+          {
+            "title": "पानी रे पानी / Water O' Water!",
+            "chapterNumber": 3
+          }
+        ]
+      },
+      {
+        "key": "hindi",
+        "name": "हिन्दी (Hindi)",
+        "chapters": [
+          {
+            "title": "चाँद का कुर्ता",
+            "chapterNumber": 1,
+            "book": "वीणा / रिमझिम"
+          },
+          {
+            "title": "चींटी",
+            "chapterNumber": 2,
+            "book": "वीणा / रिमझिम"
+          },
+          {
+            "title": "सड़क की सीख",
+            "chapterNumber": 3,
+            "book": "वीणा / रिमझिम"
+          }
+        ]
+      },
+      {
+        "key": "english",
+        "name": "अंग्रेज़ी (English)",
+        "chapters": [
+          {
+            "title": "Good Morning",
+            "chapterNumber": 1,
+            "book": "Santoor / Marigold"
+          },
+          {
+            "title": "The Magic Garden",
+            "chapterNumber": 2,
+            "book": "Santoor / Marigold"
+          },
+          {
+            "title": "Bird Talk",
+            "chapterNumber": 3,
+            "book": "Santoor / Marigold"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "classNumber": 4,
+    "subjects": [
+      {
+        "key": "math",
+        "name": "गणित / Mathematics",
+        "chapters": [
+          {
+            "title": "ईंटों से बनी इमारत / Building with Bricks",
+            "chapterNumber": 1
+          },
+          {
+            "title": "लंबा और छोटा / Long and Short",
+            "chapterNumber": 2
+          },
+          {
+            "title": "भोपाल की सैर / A Trip to Bhopal",
+            "chapterNumber": 3
+          }
+        ]
+      },
+      {
+        "key": "evs",
+        "name": "पर्यावरण अध्ययन / EVS",
+        "chapters": [
+          {
+            "title": "चलो, चलें स्कूल! / Going to School",
+            "chapterNumber": 1
+          },
+          {
+            "title": "कान-कान में / Ear to Ear",
+            "chapterNumber": 2
+          },
+          {
+            "title": "नंदू हाथी / A Day with Nandu",
+            "chapterNumber": 3
+          }
+        ]
+      },
+      {
+        "key": "hindi",
+        "name": "हिन्दी (Hindi)",
+        "chapters": [
+          {
+            "title": "मन के भोले-भाले बादल",
+            "chapterNumber": 1,
+            "book": "रिमझिम"
+          },
+          {
+            "title": "जैसा सवाल वैसा जवाब",
+            "chapterNumber": 2,
+            "book": "रिमझिम"
+          },
+          {
+            "title": "किरमिच की गेंद",
+            "chapterNumber": 3,
+            "book": "रिमझिम"
+          }
+        ]
+      },
+      {
+        "key": "english",
+        "name": "अंग्रेज़ी (English)",
+        "chapters": [
+          {
+            "title": "Wake Up!",
+            "chapterNumber": 1,
+            "book": "Marigold"
+          },
+          {
+            "title": "Neha's Alarm Clock",
+            "chapterNumber": 2,
+            "book": "Marigold"
+          },
+          {
+            "title": "Noses",
+            "chapterNumber": 3,
+            "book": "Marigold"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "classNumber": 5,
+    "subjects": [
+      {
+        "key": "math",
+        "name": "गणित / Mathematics",
+        "chapters": [
+          {
+            "title": "मछली उछली / The Fish Tale",
+            "chapterNumber": 1
+          },
+          {
+            "title": "कोण और आकृतियाँ / Shapes and Angles",
+            "chapterNumber": 2
+          },
+          {
+            "title": "हिस्से और पूरे / Parts and Wholes",
+            "chapterNumber": 3
+          }
+        ]
+      },
+      {
+        "key": "evs",
+        "name": "पर्यावरण अध्ययन / EVS",
+        "chapters": [
+          {
+            "title": "कैसे पहचाना चींटी ने दोस्त को? / Super Senses",
+            "chapterNumber": 1
+          },
+          {
+            "title": "कहानी सपेरों की / A Snake Charmer's Story",
+            "chapterNumber": 2
+          },
+          {
+            "title": "चखने से पचने तक / From Tasting to Digesting",
+            "chapterNumber": 3
+          }
+        ]
+      },
+      {
+        "key": "hindi",
+        "name": "हिन्दी (Hindi)",
+        "chapters": [
+          {
+            "title": "राख की रस्सी",
+            "chapterNumber": 1,
+            "book": "रिमझिम"
+          },
+          {
+            "title": "फ़सलों के त्योहार",
+            "chapterNumber": 2,
+            "book": "रिमझिम"
+          },
+          {
+            "title": "खिलौनेवाला",
+            "chapterNumber": 3,
+            "book": "रिमझिम"
+          }
+        ]
+      },
+      {
+        "key": "english",
+        "name": "अंग्रेज़ी (English)",
+        "chapters": [
+          {
+            "title": "Ice-cream Man",
+            "chapterNumber": 1,
+            "book": "Marigold"
+          },
+          {
+            "title": "Wonderful Waste!",
+            "chapterNumber": 2,
+            "book": "Marigold"
+          },
+          {
+            "title": "Teamwork",
+            "chapterNumber": 3,
+            "book": "Marigold"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "classNumber": 6,
+    "subjects": [
+      {
+        "key": "math",
+        "name": "गणित / Mathematics",
+        "chapters": [
+          {
+            "title": "अपनी संख्याओं की जानकारी / Knowing Our Numbers",
+            "chapterNumber": 1
+          },
+          {
+            "title": "पूर्ण संख्याएँ / Whole Numbers",
+            "chapterNumber": 2
+          },
+          {
+            "title": "संख्याओं के साथ खेलना / Playing with Numbers",
+            "chapterNumber": 3
+          },
+          {
+            "title": "पूर्णांक / Integers",
+            "chapterNumber": 4
+          },
+          {
+            "title": "भिन्न / Fractions",
+            "chapterNumber": 5
+          }
+        ]
+      },
+      {
+        "key": "science",
+        "name": "विज्ञान / Science",
+        "chapters": [
+          {
+            "title": "भोजन के घटक / Components of Food",
+            "chapterNumber": 1
+          },
+          {
+            "title": "पदार्थों का पृथक्करण / Separation of Substances",
+            "chapterNumber": 2
+          },
+          {
+            "title": "प्रकाश, छायाएँ एवं परावर्तन / Light & Reflections",
+            "chapterNumber": 3
+          },
+          {
+            "title": "विद्युत तथा परिपथ / Electricity",
+            "chapterNumber": 4
+          }
+        ]
+      },
+      {
+        "key": "sst",
+        "name": "सा. विज्ञान / Social Science",
+        "chapters": [
+          {
+            "title": "आरंभिक मानव की खोज में / Hunting-Gathering to Growing Food",
+            "chapterNumber": 1
+          },
+          {
+            "title": "आरंभिक नगर / Earliest Cities",
+            "chapterNumber": 2
+          },
+          {
+            "title": "सौरमंडल में पृथ्वी / Earth in Solar System",
+            "chapterNumber": 3
+          },
+          {
+            "title": "ग्लोब: अक्षांश एवं देशांतर / Latitudes & Longitudes",
+            "chapterNumber": 4
+          }
+        ]
+      },
+      {
+        "key": "hindi",
+        "name": "हिन्दी (Hindi)",
+        "chapters": [
+          {
+            "title": "वह चिड़िया जो",
+            "chapterNumber": 1,
+            "book": "वसंत / मल्हार"
+          },
+          {
+            "title": "बचपन",
+            "chapterNumber": 2,
+            "book": "वसंत / मल्हार"
+          },
+          {
+            "title": "नादान दोस्त",
+            "chapterNumber": 3,
+            "book": "वसंत / मल्हार"
+          }
+        ]
+      },
+      {
+        "key": "english",
+        "name": "अंग्रेज़ी (English)",
+        "chapters": [
+          {
+            "title": "A Bottle of Dew",
+            "chapterNumber": 1,
+            "book": "Poorvi"
+          },
+          {
+            "title": "The Raven and the Fox",
+            "chapterNumber": 2,
+            "book": "Poorvi"
+          },
+          {
+            "title": "Rama to the Rescue",
+            "chapterNumber": 3,
+            "book": "Poorvi"
+          }
+        ]
+      },
+      {
+        "key": "sanskrit",
+        "name": "संस्कृतम् (Sanskrit)",
+        "chapters": [
+          {
+            "title": "शब्दपरिचयः १",
+            "chapterNumber": 1,
+            "book": "रुचिरा / दीपशिखा"
+          },
+          {
+            "title": "शब्दपरिचयः २",
+            "chapterNumber": 2,
+            "book": "रुचिरा / दीपशिखा"
+          },
+          {
+            "title": "विद्यालयः",
+            "chapterNumber": 3,
+            "book": "रुचिरा / दीपशिखा"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "classNumber": 7,
+    "subjects": [
+      {
+        "key": "math",
+        "name": "गणित / Mathematics",
+        "chapters": [
+          {
+            "title": "पूर्णांक / Integers",
+            "chapterNumber": 1
+          },
+          {
+            "title": "भिन्न एवं दशमलव / Fractions and Decimals",
+            "chapterNumber": 2
+          },
+          {
+            "title": "आँकड़ों का प्रबंधन / Data Handling",
+            "chapterNumber": 3
+          },
+          {
+            "title": "सरल समीकरण / Simple Equations",
+            "chapterNumber": 4
+          }
+        ]
+      },
+      {
+        "key": "science",
+        "name": "विज्ञान / Science",
+        "chapters": [
+          {
+            "title": "पादपों में पोषण / Nutrition in Plants",
+            "chapterNumber": 1
+          },
+          {
+            "title": "प्राणियों में पोषण / Nutrition in Animals",
+            "chapterNumber": 2
+          },
+          {
+            "title": "ऊष्मा / Heat",
+            "chapterNumber": 3
+          },
+          {
+            "title": "अम्ल, क्षारक और लवण / Acids, Bases & Salts",
+            "chapterNumber": 4
+          }
+        ]
+      },
+      {
+        "key": "sst",
+        "name": "सा. विज्ञान / Social Science",
+        "chapters": [
+          {
+            "title": "हज़ार वर्षों के परिवर्तन / Tracing Changes",
+            "chapterNumber": 1
+          },
+          {
+            "title": "नए राजा और उनके राज्य / New Kings",
+            "chapterNumber": 2
+          },
+          {
+            "title": "पर्यावरण / Environment",
+            "chapterNumber": 3
+          },
+          {
+            "title": "समानता / On Equality",
+            "chapterNumber": 4
+          }
+        ]
+      },
+      {
+        "key": "hindi",
+        "name": "हिन्दी (Hindi)",
+        "chapters": [
+          {
+            "title": "हम पंछी उन्मुक्त गगन के",
+            "chapterNumber": 1,
+            "book": "वसंत-2"
+          },
+          {
+            "title": "हिमालय की बेटियां",
+            "chapterNumber": 2,
+            "book": "वसंत-2"
+          },
+          {
+            "title": "कठपुतली",
+            "chapterNumber": 3,
+            "book": "वसंत-2"
+          }
+        ]
+      },
+      {
+        "key": "english",
+        "name": "अंग्रेज़ी (English)",
+        "chapters": [
+          {
+            "title": "Three Questions",
+            "chapterNumber": 1,
+            "book": "Honeycomb"
+          },
+          {
+            "title": "The Squirrel",
+            "chapterNumber": 2,
+            "book": "Honeycomb"
+          },
+          {
+            "title": "A Gift of Chappals",
+            "chapterNumber": 3,
+            "book": "Honeycomb"
+          }
+        ]
+      },
+      {
+        "key": "sanskrit",
+        "name": "संस्कृतम् (Sanskrit)",
+        "chapters": [
+          {
+            "title": "सुभाषितानि",
+            "chapterNumber": 1,
+            "book": "रुचिरा-2"
+          },
+          {
+            "title": "दुर्बुद्धिः विनश्यति",
+            "chapterNumber": 2,
+            "book": "रुचिरा-2"
+          },
+          {
+            "title": "स्वावलम्बनम्",
+            "chapterNumber": 3,
+            "book": "रुचिरा-2"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "classNumber": 8,
+    "subjects": [
+      {
+        "key": "math",
+        "name": "गणित / Mathematics",
+        "chapters": [
+          {
+            "title": "परिमेय संख्याएँ / Rational Numbers",
+            "chapterNumber": 1
+          },
+          {
+            "title": "एक चर वाले रैखिक समीकरण / Linear Equations in One Variable",
+            "chapterNumber": 2
+          },
+          {
+            "title": "चतुर्भुजों को समझना / Understanding Quadrilaterals",
+            "chapterNumber": 3
+          }
+        ]
+      },
+      {
+        "key": "science",
+        "name": "विज्ञान / Science",
+        "chapters": [
+          {
+            "title": "फसल उत्पादन एवं प्रबंध / Crop Production",
+            "chapterNumber": 1
+          },
+          {
+            "title": "सूक्ष्मजीव: मित्र एवं शत्रु / Microorganisms",
+            "chapterNumber": 2
+          },
+          {
+            "title": "कोयला और पेट्रोलियम / Coal & Petroleum",
+            "chapterNumber": 3
+          },
+          {
+            "title": "प्रकाश / Light",
+            "chapterNumber": 4
+          }
+        ]
+      },
+      {
+        "key": "sst",
+        "name": "सा. विज्ञान / Social Science",
+        "chapters": [
+          {
+            "title": "कैसे, कब और कहाँ / How, When and Where",
+            "chapterNumber": 1
+          },
+          {
+            "title": "व्यापार से साम्राज्य तक / Trade to Territory",
+            "chapterNumber": 2
+          },
+          {
+            "title": "संसाधन / Resources",
+            "chapterNumber": 3
+          },
+          {
+            "title": "भारतीय संविधान / Constitution",
+            "chapterNumber": 4
+          }
+        ]
+      },
+      {
+        "key": "hindi",
+        "name": "हिन्दी (Hindi)",
+        "chapters": [
+          {
+            "title": "ध्वनि",
+            "chapterNumber": 1,
+            "book": "वसंत-3"
+          },
+          {
+            "title": "लाख की चूड़ियाँ",
+            "chapterNumber": 2,
+            "book": "वसंत-3"
+          },
+          {
+            "title": "बस की यात्रा",
+            "chapterNumber": 3,
+            "book": "वसंत-3"
+          }
+        ]
+      },
+      {
+        "key": "english",
+        "name": "अंग्रेज़ी (English)",
+        "chapters": [
+          {
+            "title": "The Best Christmas Present in the World",
+            "chapterNumber": 1,
+            "book": "Honeydew"
+          },
+          {
+            "title": "The Tsunami",
+            "chapterNumber": 2,
+            "book": "Honeydew"
+          },
+          {
+            "title": "Geography Lesson",
+            "chapterNumber": 3,
+            "book": "Honeydew"
+          }
+        ]
+      },
+      {
+        "key": "sanskrit",
+        "name": "संस्कृतम् (Sanskrit)",
+        "chapters": [
+          {
+            "title": "सुभाषितानि",
+            "chapterNumber": 1,
+            "book": "रुचिरा-3"
+          },
+          {
+            "title": "बिलस्य वाणी न कदापि मे श्रुता",
+            "chapterNumber": 2,
+            "book": "रुचिरा-3"
+          },
+          {
+            "title": "डिजीभारतम्",
+            "chapterNumber": 3,
+            "book": "रुचिरा-3"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "classNumber": 9,
+    "subjects": [
+      {
+        "key": "math",
+        "name": "गणित / Mathematics",
+        "chapters": [
+          {
+            "title": "संख्या पद्धति / Number Systems",
+            "chapterNumber": 1
+          },
+          {
+            "title": "बहुपद / Polynomials",
+            "chapterNumber": 2
+          },
+          {
+            "title": "निर्देशांक ज्यामिति / Coordinate Geometry",
+            "chapterNumber": 3
+          },
+          {
+            "title": "दो चरों वाले रैखिक समीकरण / Linear Equations in Two Variables",
+            "chapterNumber": 4
+          },
+          {
+            "title": "यूक्लिड की ज्यामिति / Euclid's Geometry",
+            "chapterNumber": 5
+          },
+          {
+            "title": "रेखाएँ और कोण / Lines and Angles",
+            "chapterNumber": 6
+          },
+          {
+            "title": "त्रिभुज / Triangles",
+            "chapterNumber": 7
+          },
+          {
+            "title": "चतुर्भुज / Quadrilaterals",
+            "chapterNumber": 8
+          },
+          {
+            "title": "स.च. एवं त्रिभुजों के क्षेत्रफल / Areas of Parallelograms & Triangles",
+            "chapterNumber": 9
+          },
+          {
+            "title": "वृत्त / Circles",
+            "chapterNumber": 10
+          },
+          {
+            "title": "रचनाएँ / Constructions",
+            "chapterNumber": 11
+          },
+          {
+            "title": "हीरोन का सूत्र / Heron's Formula",
+            "chapterNumber": 12
+          },
+          {
+            "title": "पृष्ठीय क्षेत्रफल व आयतन / Surface Areas & Volumes",
+            "chapterNumber": 13
+          },
+          {
+            "title": "सांख्यिकी / Statistics",
+            "chapterNumber": 14
+          },
+          {
+            "title": "प्रायिकता / Probability",
+            "chapterNumber": 15
+          }
+        ]
+      },
+      {
+        "key": "science",
+        "name": "विज्ञान / Science",
+        "chapters": [
+          {
+            "title": "हमारे आस-पास के पदार्थ / Matter in Our Surroundings",
+            "chapterNumber": 1
+          },
+          {
+            "title": "क्या पदार्थ शुद्ध हैं? / Is Matter Pure?",
+            "chapterNumber": 2
+          },
+          {
+            "title": "परमाणु एवं अणु / Atoms and Molecules",
+            "chapterNumber": 3
+          },
+          {
+            "title": "परमाणु की संरचना / Structure of the Atom",
+            "chapterNumber": 4
+          },
+          {
+            "title": "जीवन की मूल इकाई / Fundamental Unit of Life",
+            "chapterNumber": 5
+          },
+          {
+            "title": "ऊतक / Tissues",
+            "chapterNumber": 6
+          },
+          {
+            "title": "गति / Motion",
+            "chapterNumber": 7
+          },
+          {
+            "title": "बल तथा गति के नियम / Force & Laws of Motion",
+            "chapterNumber": 8
+          },
+          {
+            "title": "गुरुत्वाकर्षण / Gravitation",
+            "chapterNumber": 9
+          },
+          {
+            "title": "कार्य तथा ऊर्जा / Work and Energy",
+            "chapterNumber": 10
+          },
+          {
+            "title": "ध्वनि / Sound",
+            "chapterNumber": 11
+          },
+          {
+            "title": "खाद्य सुधार / Food Resources",
+            "chapterNumber": 12
+          }
+        ]
+      },
+      {
+        "key": "sst",
+        "name": "सा. विज्ञान / Social Science",
+        "chapters": [
+          {
+            "title": "फ़्रांसीसी क्रांति / The French Revolution",
+            "chapterNumber": 1
+          },
+          {
+            "title": "यूरोप में समाजवाद एवं रूसी क्रांति / Socialism in Europe",
+            "chapterNumber": 2
+          },
+          {
+            "title": "नात्सीवाद और हिटलर का उदय / Nazism and the Rise of Hitler",
+            "chapterNumber": 3
+          },
+          {
+            "title": "भारत – आकार और स्थिति / India – Size and Location",
+            "chapterNumber": 4
+          },
+          {
+            "title": "भारत का भौतिक स्वरूप / Physical Features of India",
+            "chapterNumber": 5
+          },
+          {
+            "title": "अपवाह / Drainage",
+            "chapterNumber": 6
+          },
+          {
+            "title": "जलवायु / Climate",
+            "chapterNumber": 7
+          },
+          {
+            "title": "लोकतंत्र क्या है? लोकतंत्र क्यों? / What is Democracy?",
+            "chapterNumber": 8
+          },
+          {
+            "title": "संविधान निर्माण / Constitutional Design",
+            "chapterNumber": 9
+          },
+          {
+            "title": "गाँव पालमपुर की कहानी / Story of Village Palampur",
+            "chapterNumber": 10
+          },
+          {
+            "title": "निर्धनता: एक चुनौती / Poverty as a Challenge",
+            "chapterNumber": 11
+          }
+        ]
+      },
+      {
+        "key": "english",
+        "name": "अंग्रेज़ी (English)",
+        "chapters": [
+          {
+            "title": "The Fun They Had",
+            "chapterNumber": 1
+          },
+          {
+            "title": "The Sound of Music",
+            "chapterNumber": 2
+          },
+          {
+            "title": "The Little Girl",
+            "chapterNumber": 3
+          },
+          {
+            "title": "A Truly Beautiful Mind",
+            "chapterNumber": 4
+          },
+          {
+            "title": "The Road Not Taken (Poem)",
+            "chapterNumber": 5
+          },
+          {
+            "title": "Wind (Poem)",
+            "chapterNumber": 6
+          },
+          {
+            "title": "The Lost Child (Moments)",
+            "chapterNumber": 7
+          },
+          {
+            "title": "The Adventures of Toto (Moments)",
+            "chapterNumber": 8
+          }
+        ]
+      },
+      {
+        "key": "hindi",
+        "name": "हिन्दी (Hindi)",
+        "chapters": [
+          {
+            "title": "दो बैलों की कथा",
+            "chapterNumber": 1
+          },
+          {
+            "title": "ल्हासा की ओर",
+            "chapterNumber": 2
+          },
+          {
+            "title": "उपभोक्तावाद की संस्कृति",
+            "chapterNumber": 3
+          },
+          {
+            "title": "साखियाँ एवं सबद",
+            "chapterNumber": 4
+          },
+          {
+            "title": "इस जल प्रलय में",
+            "chapterNumber": 5
+          },
+          {
+            "title": "रीढ़ की हड्डी",
+            "chapterNumber": 6
+          },
+          {
+            "title": "दुःख का अधिकार",
+            "chapterNumber": 7
+          },
+          {
+            "title": "गिल्लू",
+            "chapterNumber": 8
+          }
+        ]
+      },
+      {
+        "key": "sanskrit",
+        "name": "संस्कृतम् (शारदा)",
+        "chapters": [
+          {
+            "title": "सत्यं शिवं सुन्दरं संस्कृतम्",
+            "chapterNumber": 1,
+            "book": "शारदा"
+          },
+          {
+            "title": "सुखस्य मूलं धर्मः",
+            "chapterNumber": 2,
+            "book": "शारदा"
+          },
+          {
+            "title": "आत्मवत्सर्वभूतेषु",
+            "chapterNumber": 3,
+            "book": "शारदा"
+          },
+          {
+            "title": "न खलु वयस्तेजसो हेतुः",
+            "chapterNumber": 4,
+            "book": "शारदा"
+          },
+          {
+            "title": "एषा सा कृतकबुद्धिः",
+            "chapterNumber": 5,
+            "book": "शारदा"
+          },
+          {
+            "title": "मनःपूतं समाचरेत्",
+            "chapterNumber": 6,
+            "book": "शारदा"
+          },
+          {
+            "title": "उपायं चिन्तयेत् प्राज्ञः",
+            "chapterNumber": 7,
+            "book": "शारदा"
+          },
+          {
+            "title": "अन्नाद् आनन्दं प्रति",
+            "chapterNumber": 8,
+            "book": "शारदा"
+          },
+          {
+            "title": "कृतं प्रतिकृतं भूयात्",
+            "chapterNumber": 9,
+            "book": "शारदा"
+          },
+          {
+            "title": "णमो अरिहन्ताणम्",
+            "chapterNumber": 10,
+            "book": "शारदा"
+          },
+          {
+            "title": "वर्णोच्चारण शिक्षा 2",
+            "chapterNumber": 11,
+            "book": "शारदा"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "classNumber": 10,
+    "subjects": [
+      {
+        "key": "math",
+        "name": "गणित / Mathematics",
+        "chapters": [
+          {
+            "title": "वास्तविक संख्याएँ / Real Numbers",
+            "chapterNumber": 1
+          },
+          {
+            "title": "बहुपद / Polynomials",
+            "chapterNumber": 2
+          },
+          {
+            "title": "दो चरों वाले रैखिक समीकरण युग्म / Pair of Linear Equations",
+            "chapterNumber": 3
+          },
+          {
+            "title": "द्विघात समीकरण / Quadratic Equations",
+            "chapterNumber": 4
+          },
+          {
+            "title": "समांतर श्रेढ़ियाँ / Arithmetic Progressions",
+            "chapterNumber": 5
+          },
+          {
+            "title": "त्रिभुज / Triangles",
+            "chapterNumber": 6
+          },
+          {
+            "title": "निर्देशांक ज्यामिति / Coordinate Geometry",
+            "chapterNumber": 7
+          },
+          {
+            "title": "त्रिकोणमिति का परिचय / Introduction to Trigonometry",
+            "chapterNumber": 8
+          },
+          {
+            "title": "त्रिकोणमिति के कुछ अनुप्रयोग / Applications of Trigonometry",
+            "chapterNumber": 9
+          },
+          {
+            "title": "वृत्त / Circles",
+            "chapterNumber": 10
+          },
+          {
+            "title": "वृत्तों से संबंधित क्षेत्रफल / Areas Related to Circles",
+            "chapterNumber": 11
+          },
+          {
+            "title": "पृष्ठीय क्षेत्रफल और आयतन / Surface Areas and Volumes",
+            "chapterNumber": 12
+          },
+          {
+            "title": "सांख्यिकी / Statistics",
+            "chapterNumber": 13
+          },
+          {
+            "title": "प्रायिकता / Probability",
+            "chapterNumber": 14
+          }
+        ]
+      },
+      {
+        "key": "science",
+        "name": "विज्ञान / Science",
+        "chapters": [
+          {
+            "title": "रासायनिक अभिक्रियाएँ एवं समीकरण / Chemical Reactions & Equations",
+            "chapterNumber": 1
+          },
+          {
+            "title": "अम्ल, क्षारक एवं लवण / Acids, Bases & Salts",
+            "chapterNumber": 2
+          },
+          {
+            "title": "धातु एवं अधातु / Metals & Non-metals",
+            "chapterNumber": 3
+          },
+          {
+            "title": "कार्बन एवं उसके यौगिक / Carbon & its Compounds",
+            "chapterNumber": 4
+          },
+          {
+            "title": "जैव प्रक्रम / Life Processes",
+            "chapterNumber": 5
+          },
+          {
+            "title": "नियंत्रण एवं समन्वय / Control & Coordination",
+            "chapterNumber": 6
+          },
+          {
+            "title": "जीव जनन कैसे करते हैं? / How do Organisms Reproduce?",
+            "chapterNumber": 7
+          },
+          {
+            "title": "आनुवंशिकता / Heredity",
+            "chapterNumber": 8
+          },
+          {
+            "title": "प्रकाश परावर्तन तथा अपवर्तन / Light Reflection & Refraction",
+            "chapterNumber": 9
+          },
+          {
+            "title": "मानव नेत्र तथा रंग-बिरंगा संसार / Human Eye & Colourful World",
+            "chapterNumber": 10
+          },
+          {
+            "title": "विद्युत / Electricity",
+            "chapterNumber": 11
+          },
+          {
+            "title": "विद्युत धारा के चुंबकीय प्रभाव / Magnetic Effects of Electric Current",
+            "chapterNumber": 12
+          },
+          {
+            "title": "हमारा पर्यावरण / Our Environment",
+            "chapterNumber": 13
+          }
+        ]
+      },
+      {
+        "key": "sst",
+        "name": "सा. विज्ञान / Social Science",
+        "chapters": [
+          {
+            "title": "यूरोप में राष्ट्रवाद का उदय / Rise of Nationalism in Europe",
+            "chapterNumber": 1
+          },
+          {
+            "title": "भारत में राष्ट्रवाद / Nationalism in India",
+            "chapterNumber": 2
+          },
+          {
+            "title": "संसाधन और विकास / Resources & Development",
+            "chapterNumber": 3
+          },
+          {
+            "title": "जल संसाधन / Water Resources",
+            "chapterNumber": 4
+          },
+          {
+            "title": "कृषि / Agriculture",
+            "chapterNumber": 5
+          },
+          {
+            "title": "सत्ता की साझेदारी / Power Sharing",
+            "chapterNumber": 6
+          },
+          {
+            "title": "संघवाद / Federalism",
+            "chapterNumber": 7
+          },
+          {
+            "title": "विकास / Development",
+            "chapterNumber": 8
+          },
+          {
+            "title": "मुद्रा और साख / Money & Credit",
+            "chapterNumber": 9
+          }
+        ]
+      },
+      {
+        "key": "english",
+        "name": "अंग्रेज़ी (English)",
+        "chapters": [
+          {
+            "title": "A Letter to God",
+            "chapterNumber": 1
+          },
+          {
+            "title": "Nelson Mandela: Long Walk to Freedom",
+            "chapterNumber": 2
+          },
+          {
+            "title": "Two Stories about Flying",
+            "chapterNumber": 3
+          },
+          {
+            "title": "From the Diary of Anne Frank",
+            "chapterNumber": 4
+          },
+          {
+            "title": "Dust of Snow (Poem)",
+            "chapterNumber": 5
+          },
+          {
+            "title": "Fire and Ice (Poem)",
+            "chapterNumber": 6
+          },
+          {
+            "title": "A Triumph of Surgery (Footprints)",
+            "chapterNumber": 7
+          },
+          {
+            "title": "The Thief's Story (Footprints)",
+            "chapterNumber": 8
+          },
+          {
+            "title": "Bholi (Footprints)",
+            "chapterNumber": 9
+          }
+        ]
+      },
+      {
+        "key": "hindi",
+        "name": "हिन्दी (Hindi)",
+        "chapters": [
+          {
+            "title": "पद (सूरदास)",
+            "chapterNumber": 1
+          },
+          {
+            "title": "राम-लक्ष्मण-परशुराम संवाद",
+            "chapterNumber": 2
+          },
+          {
+            "title": "नेताजी का चश्मा",
+            "chapterNumber": 3
+          },
+          {
+            "title": "बालगोबिन भगत",
+            "chapterNumber": 4
+          },
+          {
+            "title": "माता का आँचल",
+            "chapterNumber": 5
+          },
+          {
+            "title": "साखी (कबीर)",
+            "chapterNumber": 6
+          },
+          {
+            "title": "बड़े भाई साहब",
+            "chapterNumber": 7
+          },
+          {
+            "title": "हरिहर काका",
+            "chapterNumber": 8
+          }
+        ]
+      },
+      {
+        "key": "sanskrit",
+        "name": "संस्कृतम् (शेमुषी)",
+        "chapters": [
+          {
+            "title": "शुचिपर्यावरणम्",
+            "chapterNumber": 1,
+            "book": "शेमुषी"
+          },
+          {
+            "title": "बुद्धिर्बलवती सदा",
+            "chapterNumber": 2,
+            "book": "शेमुषी"
+          },
+          {
+            "title": "शिशुलालनम्",
+            "chapterNumber": 3,
+            "book": "शेमुषी"
+          },
+          {
+            "title": "जननी तुल्यवत्सला",
+            "chapterNumber": 4,
+            "book": "शेमुषी"
+          },
+          {
+            "title": "सुभाषितानि",
+            "chapterNumber": 5,
+            "book": "शेमुषी"
+          },
+          {
+            "title": "सौहार्दं प्रकृतेः शोभा",
+            "chapterNumber": 6,
+            "book": "शेमुषी"
+          },
+          {
+            "title": "विचित्रः साक्षी",
+            "chapterNumber": 7,
+            "book": "शेमुषी"
+          },
+          {
+            "title": "सूक्तयः",
+            "chapterNumber": 8,
+            "book": "शेमुषी"
+          },
+          {
+            "title": "भूकम्पविभीषिका",
+            "chapterNumber": 9,
+            "book": "शेमुषी"
+          },
+          {
+            "title": "अन्योक्तयः",
+            "chapterNumber": 10,
+            "book": "शेमुषी"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "classNumber": 11,
+    "streams": [
+      {
+        "name": "Science",
+        "subjects": [
+          {
+            "key": "physics",
+            "name": "भौतिक विज्ञान / Physics",
+            "icon": "⚡",
+            "chapters": [
+              {
+                "title": "मात्रक और मापन / Units & Measurements",
+                "chapterNumber": 1
+              },
+              {
+                "title": "सरल रेखा में गति / Motion in a Straight Line",
+                "chapterNumber": 2
+              },
+              {
+                "title": "गति के नियम / Laws of Motion",
+                "chapterNumber": 3
+              },
+              {
+                "title": "कार्य, ऊर्जा और शक्ति / Work, Energy & Power",
+                "chapterNumber": 4
+              },
+              {
+                "title": "गुरुत्वाकर्षण / Gravitation",
+                "chapterNumber": 5
+              },
+              {
+                "title": "ऊष्मागतिकी / Thermodynamics",
+                "chapterNumber": 6
+              }
+            ]
+          },
+          {
+            "key": "chemistry",
+            "name": "रसायन विज्ञान / Chemistry",
+            "icon": "🧪",
+            "chapters": [
+              {
+                "title": "रसायन की मूल अवधारणाएँ / Basic Concepts",
+                "chapterNumber": 1
+              },
+              {
+                "title": "परमाणु की संरचना / Structure of Atom",
+                "chapterNumber": 2
+              },
+              {
+                "title": "रासायनिक आबंधन / Chemical Bonding",
+                "chapterNumber": 3
+              },
+              {
+                "title": "ऊष्मागतिकी / Thermodynamics",
+                "chapterNumber": 4
+              },
+              {
+                "title": "हाइड्रोकार्बन / Hydrocarbons",
+                "chapterNumber": 5
+              }
+            ]
+          },
+          {
+            "key": "math",
+            "name": "गणित / Mathematics",
+            "icon": "📐",
+            "chapters": [
+              {
+                "title": "समुच्चय / Sets",
+                "chapterNumber": 1
+              },
+              {
+                "title": "संबंध एवं फलन / Relations & Functions",
+                "chapterNumber": 2
+              },
+              {
+                "title": "त्रिकोणमितीय फलन / Trigonometric Functions",
+                "chapterNumber": 3
+              },
+              {
+                "title": "क्रमचय और संचय / Permutations & Combinations",
+                "chapterNumber": 4
+              },
+              {
+                "title": "सरल रेखाएँ / Straight Lines",
+                "chapterNumber": 5
+              },
+              {
+                "title": "सीमा और अवकलज / Limits & Derivatives",
+                "chapterNumber": 6
+              }
+            ]
+          },
+          {
+            "key": "biology",
+            "name": "जीव विज्ञान / Biology",
+            "icon": "🧬",
+            "chapters": [
+              {
+                "title": "जीव जगत / Living World",
+                "chapterNumber": 1
+              },
+              {
+                "title": "कोशिका: जीवन की इकाई / Cell: Unit of Life",
+                "chapterNumber": 2
+              },
+              {
+                "title": "जैव अणु / Biomolecules",
+                "chapterNumber": 3
+              },
+              {
+                "title": "पादप कार्यिकी / Plant Physiology",
+                "chapterNumber": 4
+              },
+              {
+                "title": "मानव शरीर क्रिया विज्ञान / Human Physiology",
+                "chapterNumber": 5
+              }
+            ]
+          },
+          {
+            "key": "english",
+            "name": "अंग्रेज़ी / English",
+            "icon": "📚",
+            "chapters": [
+              {
+                "title": "The Portrait of a Lady",
+                "chapterNumber": 1
+              },
+              {
+                "title": "We're Not Afraid to Die",
+                "chapterNumber": 2
+              },
+              {
+                "title": "Discovering Tut",
+                "chapterNumber": 3
+              },
+              {
+                "title": "The Ailing Planet",
+                "chapterNumber": 4
+              },
+              {
+                "title": "The Adventure",
+                "chapterNumber": 5
+              },
+              {
+                "title": "Silk Road",
+                "chapterNumber": 6
+              },
+              {
+                "title": "A Photograph (Poem)",
+                "chapterNumber": 7
+              },
+              {
+                "title": "The Laburnum Top (Poem)",
+                "chapterNumber": 8
+              },
+              {
+                "title": "The Voice of the Rain (Poem)",
+                "chapterNumber": 9
+              },
+              {
+                "title": "Childhood (Poem)",
+                "chapterNumber": 10
+              },
+              {
+                "title": "The Summer of the Beautiful White Horse",
+                "chapterNumber": 11
+              },
+              {
+                "title": "The Address",
+                "chapterNumber": 12
+              },
+              {
+                "title": "Mother's Day",
+                "chapterNumber": 13
+              },
+              {
+                "title": "Birth",
+                "chapterNumber": 14
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Commerce",
+        "subjects": [
+          {
+            "key": "accountancy",
+            "name": "लेखाशास्त्र / Accountancy",
+            "icon": "📒",
+            "chapters": [
+              {
+                "title": "लेखांकन परिचय / Introduction to Accounting",
+                "chapterNumber": 1
+              },
+              {
+                "title": "लेन-देनों का अभिलेखन / Recording Transactions",
+                "chapterNumber": 2
+              },
+              {
+                "title": "बैंक समाधान विवरण / BRS",
+                "chapterNumber": 3
+              },
+              {
+                "title": "वित्तीय विवरण / Financial Statements",
+                "chapterNumber": 4
+              }
+            ]
+          },
+          {
+            "key": "business",
+            "name": "व्यवसाय अध्ययन / Business Studies",
+            "icon": "🏢",
+            "chapters": [
+              {
+                "title": "व्यापार और वाणिज्य / Business, Trade & Commerce",
+                "chapterNumber": 1
+              },
+              {
+                "title": "व्यावसायिक संगठन / Forms of Business",
+                "chapterNumber": 2
+              },
+              {
+                "title": "व्यावसायिक वित्त के स्रोत / Sources of Finance",
+                "chapterNumber": 3
+              }
+            ]
+          },
+          {
+            "key": "economics",
+            "name": "अर्थशास्त्र / Economics",
+            "icon": "📊",
+            "chapters": [
+              {
+                "title": "सांख्यिकी परिचय / Statistics Intro",
+                "chapterNumber": 1
+              },
+              {
+                "title": "केंद्रीय प्रवृत्ति की माप / Measures of Central Tendency",
+                "chapterNumber": 2
+              },
+              {
+                "title": "1950-1990 भारतीय अर्थव्यवस्था / Indian Economy",
+                "chapterNumber": 3
+              },
+              {
+                "title": "उदारीकरण, निजीकरण, वैश्वीकरण / LPG Reforms",
+                "chapterNumber": 4
+              }
+            ]
+          },
+          {
+            "key": "math",
+            "name": "गणित / Mathematics",
+            "icon": "📐",
+            "chapters": [
+              {
+                "title": "समुच्चय व फलन / Sets & Functions",
+                "chapterNumber": 1
+              },
+              {
+                "title": "बीजगणित / Algebra",
+                "chapterNumber": 2
+              },
+              {
+                "title": "कैलकुलस / Calculus",
+                "chapterNumber": 3
+              }
+            ]
+          },
+          {
+            "key": "english",
+            "name": "अंग्रेज़ी / English",
+            "icon": "📚",
+            "chapters": [
+              {
+                "title": "The Portrait of a Lady",
+                "chapterNumber": 1
+              },
+              {
+                "title": "We're Not Afraid to Die",
+                "chapterNumber": 2
+              },
+              {
+                "title": "Discovering Tut",
+                "chapterNumber": 3
+              },
+              {
+                "title": "The Ailing Planet",
+                "chapterNumber": 4
+              },
+              {
+                "title": "The Adventure",
+                "chapterNumber": 5
+              },
+              {
+                "title": "Silk Road",
+                "chapterNumber": 6
+              },
+              {
+                "title": "A Photograph (Poem)",
+                "chapterNumber": 7
+              },
+              {
+                "title": "The Laburnum Top (Poem)",
+                "chapterNumber": 8
+              },
+              {
+                "title": "The Voice of the Rain (Poem)",
+                "chapterNumber": 9
+              },
+              {
+                "title": "Childhood (Poem)",
+                "chapterNumber": 10
+              },
+              {
+                "title": "The Summer of the Beautiful White Horse",
+                "chapterNumber": 11
+              },
+              {
+                "title": "The Address",
+                "chapterNumber": 12
+              },
+              {
+                "title": "Mother's Day",
+                "chapterNumber": 13
+              },
+              {
+                "title": "Birth",
+                "chapterNumber": 14
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Arts",
+        "subjects": [
+          {
+            "key": "history",
+            "name": "इतिहास / History",
+            "icon": "🏛️",
+            "chapters": [
+              {
+                "title": "लेखन कला और शहरी जीवन / Writing and City Life",
+                "chapterNumber": 1
+              },
+              {
+                "title": "तीन महाद्वीपों में साम्राज्य / Empire Across Three Continents",
+                "chapterNumber": 2
+              },
+              {
+                "title": "बदलती सांस्कृतिक परंपराएँ / Changing Cultural Traditions",
+                "chapterNumber": 3
+              }
+            ]
+          },
+          {
+            "key": "geography",
+            "name": "भूगोल / Geography",
+            "icon": "🌏",
+            "chapters": [
+              {
+                "title": "भूगोल एक विषय / Geography as Discipline",
+                "chapterNumber": 1
+              },
+              {
+                "title": "पृथ्वी की आंतरिक संरचना / Interior of Earth",
+                "chapterNumber": 2
+              },
+              {
+                "title": "भारत: स्थिति व भू-आकृति / India: Location & Physiography",
+                "chapterNumber": 3
+              },
+              {
+                "title": "जलवायु / Climate",
+                "chapterNumber": 4
+              }
+            ]
+          },
+          {
+            "key": "polscience",
+            "name": "राजनीति विज्ञान / Political Science",
+            "icon": "⚖️",
+            "chapters": [
+              {
+                "title": "संविधान: क्यों और कैसे? / Constitution: Why and How?",
+                "chapterNumber": 1
+              },
+              {
+                "title": "भारतीय संविधान में अधिकार / Rights in Constitution",
+                "chapterNumber": 2
+              },
+              {
+                "title": "कार्यपालिका, विधायिका व न्यायपालिका / Govt Organs",
+                "chapterNumber": 3
+              }
+            ]
+          },
+          {
+            "key": "economics",
+            "name": "अर्थशास्त्र / Economics",
+            "icon": "📈",
+            "chapters": [
+              {
+                "title": "सांख्यिकी विधियाँ / Statistical Tools",
+                "chapterNumber": 1
+              },
+              {
+                "title": "भारतीय अर्थव्यवस्था का विकास / Development of Indian Economy",
+                "chapterNumber": 2
+              }
+            ]
+          },
+          {
+            "key": "english",
+            "name": "अंग्रेज़ी / English",
+            "icon": "📚",
+            "chapters": [
+              {
+                "title": "The Portrait of a Lady",
+                "chapterNumber": 1
+              },
+              {
+                "title": "We're Not Afraid to Die",
+                "chapterNumber": 2
+              },
+              {
+                "title": "Discovering Tut",
+                "chapterNumber": 3
+              },
+              {
+                "title": "The Ailing Planet",
+                "chapterNumber": 4
+              },
+              {
+                "title": "The Adventure",
+                "chapterNumber": 5
+              },
+              {
+                "title": "Silk Road",
+                "chapterNumber": 6
+              },
+              {
+                "title": "A Photograph (Poem)",
+                "chapterNumber": 7
+              },
+              {
+                "title": "The Laburnum Top (Poem)",
+                "chapterNumber": 8
+              },
+              {
+                "title": "The Voice of the Rain (Poem)",
+                "chapterNumber": 9
+              },
+              {
+                "title": "Childhood (Poem)",
+                "chapterNumber": 10
+              },
+              {
+                "title": "The Summer of the Beautiful White Horse",
+                "chapterNumber": 11
+              },
+              {
+                "title": "The Address",
+                "chapterNumber": 12
+              },
+              {
+                "title": "Mother's Day",
+                "chapterNumber": 13
+              },
+              {
+                "title": "Birth",
+                "chapterNumber": 14
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "classNumber": 12,
+    "streams": [
+      {
+        "name": "Science",
+        "subjects": [
+          {
+            "key": "physics",
+            "name": "भौतिक विज्ञान / Physics",
+            "icon": "⚡",
+            "chapters": [
+              {
+                "title": "वैद्युत आवेश तथा क्षेत्र / Electric Charges & Fields",
+                "chapterNumber": 1
+              },
+              {
+                "title": "विद्युत धारा / Current Electricity",
+                "chapterNumber": 2
+              },
+              {
+                "title": "किरण प्रकाशिकी / Ray Optics",
+                "chapterNumber": 3
+              },
+              {
+                "title": "तरंग प्रकाशिकी / Wave Optics",
+                "chapterNumber": 4
+              },
+              {
+                "title": "अर्धचालक इलेक्ट्रॉनिकी / Semiconductor Electronics",
+                "chapterNumber": 5
+              }
+            ]
+          },
+          {
+            "key": "chemistry",
+            "name": "रसायन विज्ञान / Chemistry",
+            "icon": "🧪",
+            "chapters": [
+              {
+                "title": "विलयन / Solutions",
+                "chapterNumber": 1
+              },
+              {
+                "title": "वैद्युतरसायन / Electrochemistry",
+                "chapterNumber": 2
+              },
+              {
+                "title": "रासायनिक बलगतिकी / Chemical Kinetics",
+                "chapterNumber": 3
+              },
+              {
+                "title": "उपसहसंयोजन यौगिक / Coordination Compounds",
+                "chapterNumber": 4
+              },
+              {
+                "title": "हैलोऐल्केन व हैलोऐरीन / Haloalkanes",
+                "chapterNumber": 5
+              }
+            ]
+          },
+          {
+            "key": "math",
+            "name": "गणित / Mathematics",
+            "icon": "📐",
+            "chapters": [
+              {
+                "title": "संबंध एवं फलन / Relations & Functions",
+                "chapterNumber": 1
+              },
+              {
+                "title": "आव्यूह तथा सारणिक / Matrices & Determinants",
+                "chapterNumber": 2
+              },
+              {
+                "title": "समाकलन / Integrals",
+                "chapterNumber": 3
+              },
+              {
+                "title": "अवकल समीकरण / Differential Equations",
+                "chapterNumber": 4
+              },
+              {
+                "title": "प्रायिकता / Probability",
+                "chapterNumber": 5
+              }
+            ]
+          },
+          {
+            "key": "biology",
+            "name": "जीव विज्ञान / Biology",
+            "icon": "🧬",
+            "chapters": [
+              {
+                "title": "पुष्पी पादपों में लैंगिक जनन / Sexual Reproduction in Plants",
+                "chapterNumber": 1
+              },
+              {
+                "title": "मानव जनन / Human Reproduction",
+                "chapterNumber": 2
+              },
+              {
+                "title": "वंशागति के सिद्धांत / Genetics",
+                "chapterNumber": 3
+              },
+              {
+                "title": "जैव प्रौद्योगिकी सिद्धांत / Biotechnology",
+                "chapterNumber": 4
+              }
+            ]
+          },
+          {
+            "key": "english",
+            "name": "अंग्रेज़ी / English",
+            "icon": "📚",
+            "chapters": [
+              {
+                "title": "The Last Lesson",
+                "chapterNumber": 1
+              },
+              {
+                "title": "Lost Spring",
+                "chapterNumber": 2
+              },
+              {
+                "title": "Deep Water",
+                "chapterNumber": 3
+              },
+              {
+                "title": "The Rattrap",
+                "chapterNumber": 4
+              },
+              {
+                "title": "Indigo",
+                "chapterNumber": 5
+              },
+              {
+                "title": "My Mother at Sixty-Six (Poem)",
+                "chapterNumber": 6
+              },
+              {
+                "title": "Keeping Quiet (Poem)",
+                "chapterNumber": 7
+              },
+              {
+                "title": "The Third Level",
+                "chapterNumber": 8
+              },
+              {
+                "title": "The Tiger King",
+                "chapterNumber": 9
+              },
+              {
+                "title": "The Enemy",
+                "chapterNumber": 10
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Commerce",
+        "subjects": [
+          {
+            "key": "accountancy",
+            "name": "लेखाशास्त्र / Accountancy",
+            "icon": "📒",
+            "chapters": [
+              {
+                "title": "साझेदारी लेखांकन आधारभूत / Partnership Basics",
+                "chapterNumber": 1
+              },
+              {
+                "title": "साझेदार का प्रवेश / Admission of Partner",
+                "chapterNumber": 2
+              },
+              {
+                "title": "अंश पूँजी / Share Capital",
+                "chapterNumber": 3
+              },
+              {
+                "title": "रोकड़ प्रवाह विवरण / Cash Flow",
+                "chapterNumber": 4
+              }
+            ]
+          },
+          {
+            "key": "business",
+            "name": "व्यवसाय अध्ययन / Business Studies",
+            "icon": "🏢",
+            "chapters": [
+              {
+                "title": "प्रबंध के सिद्धांत व कार्य / Principles of Management",
+                "chapterNumber": 1
+              },
+              {
+                "title": "नियोजन एवं संगठन / Planning & Organising",
+                "chapterNumber": 2
+              },
+              {
+                "title": "वित्तीय प्रबंध / Financial Management",
+                "chapterNumber": 3
+              },
+              {
+                "title": "विपणन / Marketing",
+                "chapterNumber": 4
+              }
+            ]
+          },
+          {
+            "key": "economics",
+            "name": "अर्थशास्त्र / Economics",
+            "icon": "📊",
+            "chapters": [
+              {
+                "title": "उपभोक्ता व्यवहार सिद्धांत / Consumer Behaviour",
+                "chapterNumber": 1
+              },
+              {
+                "title": "राष्ट्रीय आय का लेखांकन / National Income",
+                "chapterNumber": 2
+              },
+              {
+                "title": "मुद्रा और बैंकिंग / Money & Banking",
+                "chapterNumber": 3
+              },
+              {
+                "title": "सरकारी बजट / Government Budget",
+                "chapterNumber": 4
+              }
+            ]
+          },
+          {
+            "key": "math",
+            "name": "गणित / Mathematics",
+            "icon": "📐",
+            "chapters": [
+              {
+                "title": "संबंध एवं फलन / Relations & Functions",
+                "chapterNumber": 1
+              },
+              {
+                "title": "आव्यूह व सारणिक / Matrices & Determinants",
+                "chapterNumber": 2
+              },
+              {
+                "title": "कैलकुलस / Calculus",
+                "chapterNumber": 3
+              }
+            ]
+          },
+          {
+            "key": "english",
+            "name": "अंग्रेज़ी / English",
+            "icon": "📚",
+            "chapters": [
+              {
+                "title": "The Last Lesson",
+                "chapterNumber": 1
+              },
+              {
+                "title": "Lost Spring",
+                "chapterNumber": 2
+              },
+              {
+                "title": "Deep Water",
+                "chapterNumber": 3
+              },
+              {
+                "title": "The Rattrap",
+                "chapterNumber": 4
+              },
+              {
+                "title": "Indigo",
+                "chapterNumber": 5
+              },
+              {
+                "title": "My Mother at Sixty-Six (Poem)",
+                "chapterNumber": 6
+              },
+              {
+                "title": "Keeping Quiet (Poem)",
+                "chapterNumber": 7
+              },
+              {
+                "title": "The Third Level",
+                "chapterNumber": 8
+              },
+              {
+                "title": "The Tiger King",
+                "chapterNumber": 9
+              },
+              {
+                "title": "The Enemy",
+                "chapterNumber": 10
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Arts",
+        "subjects": [
+          {
+            "key": "history",
+            "name": "इतिहास / History",
+            "icon": "🏛️",
+            "chapters": [
+              {
+                "title": "हड़प्पा सभ्यता / Bricks, Beads & Bones",
+                "chapterNumber": 1
+              },
+              {
+                "title": "आरंभिक राज्य और अर्थव्यवस्थाएँ / Kings & Farmers",
+                "chapterNumber": 2
+              },
+              {
+                "title": "विजयनगर साम्राज्य / Vijayanagara",
+                "chapterNumber": 3
+              },
+              {
+                "title": "महात्मा गांधी व राष्ट्रीय आंदोलन / Nationalist Movement",
+                "chapterNumber": 4
+              }
+            ]
+          },
+          {
+            "key": "geography",
+            "name": "भूगोल / Geography",
+            "icon": "🌏",
+            "chapters": [
+              {
+                "title": "मानव भूगोल प्रकृति व क्षेत्र / Human Geography",
+                "chapterNumber": 1
+              },
+              {
+                "title": "विश्व जनसंख्या / World Population",
+                "chapterNumber": 2
+              },
+              {
+                "title": "भारत: जनसंख्या, बस्तियाँ व संसाधन / India: Resources",
+                "chapterNumber": 3
+              }
+            ]
+          },
+          {
+            "key": "polscience",
+            "name": "राजनीति विज्ञान / Political Science",
+            "icon": "⚖️",
+            "chapters": [
+              {
+                "title": "दो ध्रुवीयता का अंत / End of Bipolarity",
+                "chapterNumber": 1
+              },
+              {
+                "title": "समकालीन दक्षिण एशिया / South Asia",
+                "chapterNumber": 2
+              },
+              {
+                "title": "राष्ट्र-निर्माण की चुनौतियाँ / Nation-Building",
+                "chapterNumber": 3
+              },
+              {
+                "title": "नियोजित विकास / Planned Development",
+                "chapterNumber": 4
+              }
+            ]
+          },
+          {
+            "key": "economics",
+            "name": "अर्थशास्त्र / Economics",
+            "icon": "📈",
+            "chapters": [
+              {
+                "title": "व्यष्टि अर्थशास्त्र / Microeconomics",
+                "chapterNumber": 1
+              },
+              {
+                "title": "समष्टि अर्थशास्त्र / Macroeconomics",
+                "chapterNumber": 2
+              }
+            ]
+          },
+          {
+            "key": "english",
+            "name": "अंग्रेज़ी / English",
+            "icon": "📚",
+            "chapters": [
+              {
+                "title": "The Last Lesson",
+                "chapterNumber": 1
+              },
+              {
+                "title": "Lost Spring",
+                "chapterNumber": 2
+              },
+              {
+                "title": "Deep Water",
+                "chapterNumber": 3
+              },
+              {
+                "title": "The Rattrap",
+                "chapterNumber": 4
+              },
+              {
+                "title": "Indigo",
+                "chapterNumber": 5
+              },
+              {
+                "title": "My Mother at Sixty-Six (Poem)",
+                "chapterNumber": 6
+              },
+              {
+                "title": "Keeping Quiet (Poem)",
+                "chapterNumber": 7
+              },
+              {
+                "title": "The Third Level",
+                "chapterNumber": 8
+              },
+              {
+                "title": "The Tiger King",
+                "chapterNumber": 9
+              },
+              {
+                "title": "The Enemy",
+                "chapterNumber": 10
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

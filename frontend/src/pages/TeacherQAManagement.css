@@ -1,0 +1,135 @@
+.qa-management {
+  max-width: 1000px;
+  margin: auto;
+  padding: 25px;
+}
+
+.qa-management h2 {
+  color: #1d4ed8;
+  margin-bottom: 20px;
+}
+
+.qa-form-card {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.07);
+  margin-bottom: 30px;
+}
+
+.qa-form-card h3,
+.qa-list-section h3 {
+  color: #1e293b;
+  margin-top: 0;
+}
+
+.qa-form-card label {
+  display: block;
+  margin: 15px 0 6px;
+  font-weight: 600;
+}
+
+.qa-form-card input,
+.qa-form-card select,
+.qa-form-card textarea {
+  width: 100%;
+  padding: 11px;
+  border: 1px solid #cbd5e1;
+  border-radius: 7px;
+  box-sizing: border-box;
+  font-size: 15px;
+}
+
+.qa-form-card textarea {
+  resize: vertical;
+  font-family: inherit;
+}
+
+.qa-form-actions,
+.qa-item-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.qa-form-actions button,
+.qa-item-actions button {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  background: #2563eb;
+  color: white;
+  cursor: pointer;
+}
+
+.qa-form-actions button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.qa-form-actions .qa-cancel-btn {
+  background: #64748b;
+}
+
+.qa-success,
+.qa-error {
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 7px;
+}
+
+.qa-success {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.qa-error {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.qa-item-card {
+  background: white;
+  border: 1px solid #e2e8f0;
+  padding: 18px;
+  border-radius: 10px;
+  margin: 15px 0;
+}
+
+.qa-item-info h4 {
+  margin: 0 0 10px;
+  color: #1d4ed8;
+}
+
+.qa-item-info p {
+  margin: 7px 0;
+  color: #475569;
+  overflow-wrap: anywhere;
+}
+
+.qa-answer-preview {
+  white-space: pre-wrap;
+}
+
+.qa-item-actions .qa-publish-btn {
+  background: #15803d;
+}
+
+.qa-item-actions .qa-delete-btn {
+  background: #dc2626;
+}
+
+@media (max-width: 600px) {
+  .qa-management {
+    padding: 15px;
+  }
+
+  .qa-form-card {
+    padding: 17px;
+  }
+
+  .qa-item-actions button {
+    flex: 1;
+  }
+}

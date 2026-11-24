@@ -1,0 +1,115 @@
+.mcq-management {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 15px;
+}
+
+.mcq-form-card,
+.teacher-mcq-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 20px;
+  margin: 20px 0;
+}
+
+.mcq-form-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.mcq-management label {
+  font-weight: 600;
+  margin-top: 8px;
+}
+
+.mcq-management input,
+.mcq-management select,
+.mcq-management textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 11px;
+  border: 1px solid #ccc;
+  border-radius: 7px;
+  font: inherit;
+}
+
+.mcq-option-input {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.mcq-option-input label {
+  min-width: 25px;
+}
+
+.mcq-management button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+  background: #1976d2;
+  color: white;
+}
+
+.mcq-management button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.mcq-form-actions,
+.teacher-mcq-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.mcq-management .mcq-cancel-btn {
+  background: #666;
+}
+
+.mcq-management .mcq-publish-btn {
+  background: #16834a;
+}
+
+.mcq-management .mcq-delete-btn {
+  background: #d32f2f;
+}
+
+.mcq-success {
+  padding: 12px;
+  background: #e8f5e9;
+  color: #216b36;
+  border-radius: 7px;
+  margin: 10px 0;
+}
+
+.mcq-error {
+  padding: 12px;
+  background: #ffebee;
+  color: #b71c1c;
+  border-radius: 7px;
+  margin: 10px 0;
+}
+
+.teacher-mcq-card p {
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 600px) {
+  .mcq-management {
+    padding: 10px;
+  }
+
+  .mcq-form-card,
+  .teacher-mcq-card {
+    padding: 13px;
+  }
+
+  .teacher-mcq-actions button {
+    flex: 1;
+  }
+}

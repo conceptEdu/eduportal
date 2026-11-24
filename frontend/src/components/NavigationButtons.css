@@ -1,0 +1,81 @@
+.navigation-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  margin: 25px 0;
+  padding: 12px 0;
+  flex-wrap: wrap;
+}
+
+.nav-btn {
+  min-width: 100px;
+  min-height: 44px;
+  padding: 11px 22px;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.back-btn {
+  background: #64748b;
+  color: white;
+}
+
+.home-btn {
+  background: #16a34a;
+  color: white;
+}
+
+.next-btn {
+  background: #2563eb;
+  color: white;
+}
+
+.nav-btn:hover:not(:disabled) {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+.nav-btn:focus-visible {
+  outline: 3px solid #f59e0b;
+  outline-offset: 3px;
+}
+
+.nav-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  .navigation-buttons {
+    gap: 10px;
+  }
+
+  .nav-btn {
+    padding: 10px 16px;
+    font-size: 14px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .navigation-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 7px;
+  }
+
+  .nav-btn {
+    min-width: 0;
+    width: 100%;
+    padding: 10px 4px;
+    font-size: 12px;
+  }
+}

@@ -1,0 +1,143 @@
+.notes-management {
+  padding: 25px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.notes-management h2 {
+  color: #1d4ed8;
+  margin-bottom: 20px;
+}
+
+.note-form-card {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.07);
+  margin-bottom: 30px;
+}
+
+.note-form-card h3,
+.notes-list-section h3 {
+  color: #1e293b;
+  margin-top: 0;
+}
+
+.note-form-card label {
+  display: block;
+  margin: 15px 0 6px;
+  font-weight: 600;
+}
+
+.note-form-card input,
+.note-form-card select,
+.note-form-card textarea {
+  width: 100%;
+  padding: 11px;
+  border: 1px solid #cbd5e1;
+  border-radius: 7px;
+  box-sizing: border-box;
+  font-size: 15px;
+}
+
+.note-form-card textarea {
+  resize: vertical;
+  font-family: inherit;
+}
+
+.note-form-actions,
+.teacher-note-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.note-form-actions button,
+.teacher-note-actions button {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  background: #2563eb;
+  color: white;
+  cursor: pointer;
+}
+
+.note-form-actions button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.note-form-actions .cancel-note-btn {
+  background: #64748b;
+}
+
+.notes-success,
+.notes-error {
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 7px;
+}
+
+.notes-success {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.notes-error {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.teacher-note-card {
+  background: white;
+  border: 1px solid #e2e8f0;
+  padding: 18px;
+  border-radius: 10px;
+  margin: 15px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.teacher-note-info h4 {
+  margin: 0 0 10px;
+  color: #1d4ed8;
+}
+
+.teacher-note-info p {
+  margin: 5px 0;
+  color: #475569;
+}
+
+.note-status {
+  font-weight: 600;
+}
+
+.teacher-note-actions .publish-note-btn {
+  background: #15803d;
+}
+
+.teacher-note-actions .delete-note-btn {
+  background: #dc2626;
+}
+
+@media (max-width: 600px) {
+  .notes-management {
+    padding: 15px;
+  }
+
+  .note-form-card {
+    padding: 17px;
+  }
+
+  .teacher-note-card {
+    align-items: stretch;
+  }
+
+  .teacher-note-actions button {
+    flex: 1;
+  }
+}
