@@ -130,9 +130,10 @@ function StudentMCQQuiz({ chapter }) {
                   answers[item._id] === optionIndex;
 
                 const correctAnswer =
-                  result?.results?.find(
-                    r => r.questionId === item._id
-                  )?.correctAnswer;
+  result?.results?.find(
+    r => String(r.questionId) === String(item._id)
+  )?.correctAnswer;
+
 
                 let optionClass = "";
 
@@ -167,8 +168,9 @@ function StudentMCQQuiz({ chapter }) {
 
               {result && (() => {
                 const answerResult = result.results.find(
-                  r => r.questionId === item._id
-                );
+  r => String(r.questionId) === String(item._id)
+);
+
 
                 return (
                   <div className="mcq-answer-explanation">

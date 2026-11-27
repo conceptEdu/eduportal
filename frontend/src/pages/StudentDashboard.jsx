@@ -290,7 +290,7 @@ function StudentDashboard({ student, onLogout, onOpenChapter }) {
       Chapter {chapter.chapterNumber}
     </strong>
 
-    <p>{chapter.name}</p>
+    <p>{chapter.title}</p>
   </button>
 ))}
 

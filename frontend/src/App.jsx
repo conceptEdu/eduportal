@@ -6,6 +6,7 @@ import SubjectSelection from "./pages/SubjectSelection";
 import ChapterSelection from "./pages/ChapterSelection";
 import ChapterContentHub from "./pages/ChapterContentHub";
 import TeacherVideoManagement from "./pages/TeacherVideoManagement";
+import BackendTest from "./components/BackendTest";
 
 import TeacherLogin from "./pages/TeacherLogin";
 import TeacherDashboard from "./pages/TeacherDashboard";
@@ -180,6 +181,11 @@ function App() {
             <button onClick={() => setStep("student-registration")}>
               Student Registration
             </button>
+
+            <button onClick={() => setStep("backend-test")}>
+              Test Backend Connection
+            </button>
+
           </div>
 
           <ClassSelection
@@ -188,6 +194,19 @@ function App() {
           />
         </>
       )}
+
+      {/* Backend Connection Test */}
+{step === "backend-test" && (
+  <div>
+    <BackendTest />
+
+
+    <button onClick={() => setStep("class")}>
+      Back to Home
+    </button>
+  </div>
+)}
+
 
       {/* Student Registration */}
       {step === "student-registration" && (
