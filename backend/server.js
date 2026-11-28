@@ -14,6 +14,7 @@ const videoRoutes = require("./routes/videoRoutes");
 const mcqRoutes = require("./routes/mcqRoutes");
 
 const teacherAssignmentRoutes = require("./routes/teacherAssignmentRoutes");
+const studentRoutes = require("./routes/studentRoutes");
 
 const classRoutes = require("./routes/classRoutes");
 const streamRoutes = require("./routes/streamRoutes");
@@ -65,6 +66,7 @@ app.use(
   "/api/teacher-assignments",
   teacherAssignmentRoutes
 );
+app.use("/api/students", studentRoutes);
 
 // 404 Handler
 app.use((req, res) => {
