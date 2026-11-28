@@ -302,6 +302,7 @@ const decodedToken = await auth.verifyIdToken(firebaseIdToken);
       password: hashedPassword,
       role: "student",
       classId: admission.classId,
+      sectionId: admission.sectionId,
       streamId: admission.streamId,
       isActive: true
     });
@@ -330,6 +331,7 @@ const decodedToken = await auth.verifyIdToken(firebaseIdToken);
         mobile: student.mobile,
         role: student.role,
         classId: student.classId,
+        sectionId: student.sectionId,
         streamId: student.streamId
       }
     });
