@@ -53,6 +53,11 @@ const userSchema = new mongoose.Schema(
       ref: "Class",
       default: null
     },
+    sectionId: {
+  type: mongoose.Schema.Types.ObjectId,
+  ref: "Section",
+  default: null
+   },
 
     streamId: {
       type: mongoose.Schema.Types.ObjectId,
