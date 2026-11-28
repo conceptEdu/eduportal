@@ -1,5 +1,6 @@
 const StudentAdmission = require("../models/StudentAdmission");
 const Class = require("../models/Class");
+const Section = require("../models/Section");
 const Stream = require("../models/Stream");
 
 const bcrypt = require("bcryptjs");
@@ -12,6 +13,7 @@ const createStudentAdmission = async (req, res) => {
       admissionNumber,
       studentName,
       classId,
+      sectionId,
       streamId
     } = req.body;
 
@@ -49,8 +51,28 @@ const createStudentAdmission = async (req, res) => {
         message: "Invalid or inactive class"
       });
     }
+    // 3. Validate Section
+if (!sectionId) {
+  return res.status(400).json({
+    success: false,
+    message: "Section is required"
+  });
+}
 
-    // 3. Validate stream
+const selectedSection = await Section.findOne({
+  _id: sectionId,
+  classId: selectedClass._id,
+  isActive: true
+});
+
+if (!selectedSection) {
+  return res.status(400).json({
+    success: false,
+    message: "Invalid or inactive section for selected class"
+  });
+}
+
+    // 4. Validate stream
     let selectedStream = null;
 
     if (selectedClass.hasStreams) {
@@ -80,7 +102,7 @@ const createStudentAdmission = async (req, res) => {
       });
     }
 
-    // 4. Check duplicate admission number
+    // 5. Check duplicate admission number
     const existingAdmission = await StudentAdmission.findOne({
       admissionNumber: normalizedAdmissionNumber
     });
@@ -92,7 +114,7 @@ const createStudentAdmission = async (req, res) => {
       });
     }
 
-    // 5. Generate secure random PIN
+    // 6. Generate secure random PIN
     const registrationPIN = crypto
       .randomInt(100000, 1000000)
       .toString();
@@ -102,23 +124,24 @@ const createStudentAdmission = async (req, res) => {
       12
     );
 
-    // 6. PIN validity: 24 hours
+    // 7. PIN validity: 24 hours
     const pinExpiresAt = new Date(
       Date.now() + 24 * 60 * 60 * 1000
     );
 
-    // 7. Create admission record
+    // 8. Create admission record
     const admission = await StudentAdmission.create({
       admissionNumber: normalizedAdmissionNumber,
       studentName: studentName.trim(),
       classId: selectedClass._id,
+      sectionId: selectedSection._id,
       streamId: selectedStream?._id || null,
       registrationPinHash,
       pinExpiresAt,
       createdBy: req.user.userId
     });
 
-    // 8. Return PIN only once to authorized creator
+    // 9. Return PIN only once to authorized creator
     return res.status(201).json({
       success: true,
       message: "Student admission created successfully",
@@ -127,6 +150,7 @@ const createStudentAdmission = async (req, res) => {
         admissionNumber: admission.admissionNumber,
         studentName: admission.studentName,
         class: selectedClass.name,
+        section: selectedSection.name,
         stream: selectedStream?.name || null,
         registrationPIN,
         pinExpiresAt: admission.pinExpiresAt
