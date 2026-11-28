@@ -16,31 +16,49 @@ function TeacherDashboard({ teacher, onLogout, onManageVideos }) {
   const [studentError, setStudentError] = useState("");
 
   const fetchStudents = async (type) => {
-    try {
-      setLoadingStudents(true);
-      setStudentError("");
-      setStudents([]);
-      setShowStudents(true);
-      setStudentListType(type);
+    setShowStudents(true);
+    setStudentListType(type);
+    setLoadingStudents(true);
+    setStudentError("");
+    setStudents([]);
 
+    try {
       const endpoint =
-        type === "all"
-          ? "/students"
-          : "/students/my-class";
+        type === "all" ? "/students" : "/students/my-class";
 
       const response = await api.get(endpoint);
 
-      setStudents(response.data.data || []);
+      if (response.data?.success) {
+        setStudents(response.data.data || []);
+      } else {
+        setStudentError(
+          response.data?.message || "Student list nahi mili."
+        );
+      }
     } catch (error) {
       console.error("Student List Error:", error);
 
       setStudentError(
         error.response?.data?.message ||
+        error.message ||
         "Students list load nahi ho saki."
       );
     } finally {
       setLoadingStudents(false);
     }
+  };
+
+  const studentButtonStyle = {
+    backgroundColor: "#2563eb",
+    color: "#ffffff",
+    padding: "13px 18px",
+    border: "none",
+    borderRadius: "8px",
+    fontSize: "15px",
+    fontWeight: "600",
+    cursor: "pointer",
+    margin: "5px",
+    minHeight: "46px"
   };
 
   return (
@@ -61,6 +79,7 @@ function TeacherDashboard({ teacher, onLogout, onManageVideos }) {
 
         <h3>Teacher Panel</h3>
 
+        {/* Teacher Profile */}
         <div className="teacher-profile-card">
           <h4>Teacher Profile</h4>
 
@@ -77,110 +96,148 @@ function TeacherDashboard({ teacher, onLogout, onManageVideos }) {
           </p>
         </div>
 
-        {/* Student List Buttons */}
-        <div className="teacher-student-entry">
-          <h3>Student Management</h3>
+        {/* STUDENT MANAGEMENT */}
+        <section
+          style={{
+            display: "block",
+            visibility: "visible",
+            width: "100%",
+            boxSizing: "border-box",
+            background: "#ffffff",
+            padding: "22px",
+            margin: "25px 0",
+            borderRadius: "12px",
+            boxShadow: "0 3px 12px rgba(0,0,0,0.10)"
+          }}
+        >
+          <h3 style={{ color: "#1e293b", marginTop: "0" }}>
+            Student Management
+          </h3>
 
-          <button
-            onClick={() => fetchStudents("all")}
-            disabled={loadingStudents}
+          <p>विद्यार्थियों की सूची देखने के लिए बटन चुनें।</p>
+
+          <div
+            style={{
+              display: "flex",
+              flexWrap: "wrap",
+              gap: "10px"
+            }}
           >
-            View All Students
-          </button>
-
-          <button
-            onClick={() => fetchStudents("my-class")}
-            disabled={loadingStudents}
-          >
-            My Class Students
-          </button>
-        </div>
-
-        {/* Student List */}
-        {showStudents && (
-          <div className="teacher-student-list">
-
-            <h3>
-              {studentListType === "all"
-                ? "All Students"
-                : "My Class Students"}
-            </h3>
-
             <button
-              onClick={() => setShowStudents(false)}
+              type="button"
+              style={studentButtonStyle}
+              disabled={loadingStudents}
+              onClick={() => fetchStudents("all")}
             >
-              Close List
+              View All Students
             </button>
 
-            {loadingStudents && (
-              <p>Loading students...</p>
-            )}
-
-            {studentError && (
-              <p style={{ color: "red" }}>
-                {studentError}
-              </p>
-            )}
-
-            {!loadingStudents && !studentError && (
-              <>
-                <p>
-                  Total Students: {students.length}
-                </p>
-
-                {students.length === 0 ? (
-                  <p>No students found.</p>
-                ) : (
-                  <div style={{ overflowX: "auto" }}>
-                    <table
-                      border="1"
-                      cellPadding="8"
-                      style={{
-                        width: "100%",
-                        borderCollapse: "collapse"
-                      }}
-                    >
-                      <thead>
-                        <tr>
-                          <th>Sl. No.</th>
-                          <th>Student Name</th>
-                          <th>Admission No.</th>
-                          <th>Class</th>
-                          <th>Section</th>
-                          <th>Stream</th>
-                          <th>Mobile</th>
-                        </tr>
-                      </thead>
-
-                      <tbody>
-                        {students.map((student, index) => (
-                          <tr key={student._id}>
-                            <td>{index + 1}</td>
-                            <td>{student.name}</td>
-                            <td>{student.admissionNumber}</td>
-                            <td>
-                              {student.classId?.name ||
-                                student.classId?.classNumber ||
-                                "-"}
-                            </td>
-                            <td>
-                              {student.sectionId?.name || "-"}
-                            </td>
-                            <td>
-                              {student.streamId?.name || "-"}
-                            </td>
-                            <td>{student.mobile || "-"}</td>
-                          </tr>
-                        ))}
-                      </tbody>
-                    </table>
-                  </div>
-                )}
-              </>
-            )}
-
+            <button
+              type="button"
+              style={{
+                ...studentButtonStyle,
+                backgroundColor: "#15803d"
+              }}
+              disabled={loadingStudents}
+              onClick={() => fetchStudents("my-class")}
+            >
+              My Class Students
+            </button>
           </div>
-        )}
+
+          {/* STUDENT RESULTS */}
+          {showStudents && (
+            <div
+              style={{
+                marginTop: "22px",
+                padding: "15px",
+                background: "#f8fafc",
+                borderRadius: "10px"
+              }}
+            >
+              <h3>
+                {studentListType === "all"
+                  ? "All Students"
+                  : "My Class Students"}
+              </h3>
+
+              <button
+                type="button"
+                onClick={() => setShowStudents(false)}
+                style={{
+                  background: "#dc2626",
+                  color: "white",
+                  padding: "9px 15px",
+                  border: "none",
+                  borderRadius: "6px"
+                }}
+              >
+                Close List
+              </button>
+
+              {loadingStudents && <p>Loading students...</p>}
+
+              {studentError && (
+                <p style={{ color: "red" }}>
+                  {studentError}
+                </p>
+              )}
+
+              {!loadingStudents && !studentError && (
+                <>
+                  <p>
+                    Total Students: {students.length}
+                  </p>
+
+                  {students.length === 0 ? (
+                    <p>No students found.</p>
+                  ) : (
+                    <div style={{ overflowX: "auto" }}>
+                      <table
+                        style={{
+                          width: "100%",
+                          minWidth: "650px",
+                          borderCollapse: "collapse",
+                          background: "white"
+                        }}
+                      >
+                        <thead>
+                          <tr style={{ background: "#1e40af", color: "white" }}>
+                            <th>Sl. No.</th>
+                            <th>Student Name</th>
+                            <th>Admission No.</th>
+                            <th>Class</th>
+                            <th>Section</th>
+                            <th>Stream</th>
+                            <th>Mobile</th>
+                          </tr>
+                        </thead>
+
+                        <tbody>
+                          {students.map((student, index) => (
+                            <tr key={student._id}>
+                              <td>{index + 1}</td>
+                              <td>{student.name || "-"}</td>
+                              <td>{student.admissionNumber || "-"}</td>
+                              <td>
+                                {student.classId?.name ||
+                                  student.classId?.classNumber ||
+                                  "-"}
+                              </td>
+                              <td>{student.sectionId?.name || "-"}</td>
+                              <td>{student.streamId?.name || "-"}</td>
+                              <td>{student.mobile || "-"}</td>
+                            </tr>
+                          ))}
+                        </tbody>
+                      </table>
+                    </div>
+                  )}
+                </>
+              )}
+            </div>
+          )}
+        </section>
 
         {/* Bulk Student Admission */}
         <TeacherBulkAdmission />
@@ -201,9 +258,7 @@ function TeacherDashboard({ teacher, onLogout, onManageVideos }) {
 
         {/* Existing Modules */}
         <TeacherNotesManagement />
-
         <TeacherQAManagement />
-
         <TeacherMCQManagement />
 
       </main>
