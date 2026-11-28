@@ -210,6 +210,7 @@ function TeacherDashboard({ teacher, onLogout, onManageVideos }) {
                             <th>Section</th>
                             <th>Stream</th>
                             <th>Mobile</th>
+                            <th>Registration Status</th>
                           </tr>
                         </thead>
 
@@ -227,6 +228,9 @@ function TeacherDashboard({ teacher, onLogout, onManageVideos }) {
                               <td>{student.sectionId?.name || "-"}</td>
                               <td>{student.streamId?.name || "-"}</td>
                               <td>{student.mobile || "-"}</td>
+                              <td>{student.registrationStatus === "Registered"
+                                    ? "Registered": "Pending"}
+                              </td>
                             </tr>
                           ))}
                         </tbody>
