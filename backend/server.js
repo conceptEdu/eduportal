@@ -13,6 +13,8 @@ const subjectiveQARoutes = require("./routes/subjectiveQARoutes");
 const videoRoutes = require("./routes/videoRoutes");
 const mcqRoutes = require("./routes/mcqRoutes");
 
+const teacherAssignmentRoutes = require("./routes/teacherAssignmentRoutes");
+
 const classRoutes = require("./routes/classRoutes");
 const streamRoutes = require("./routes/streamRoutes");
 const subjectRoutes = require("./routes/subjectRoutes");
@@ -58,6 +60,11 @@ app.use("/api/subjective-qa", subjectiveQARoutes);
 app.use("/api/auth", authRoutes);
 app.use("/api/videos", videoRoutes);
 app.use("/api/mcq", mcqRoutes);
+
+app.use(
+  "/api/teacher-assignments",
+  teacherAssignmentRoutes
+);
 
 // 404 Handler
 app.use((req, res) => {
