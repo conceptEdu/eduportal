@@ -1,7 +1,7 @@
 
 import { useState } from "react";
-
 import api from "../services/api";
+import "./TeacherDashboard.css";
 
 import TeacherNotesManagement from "./TeacherNotesManagement";
 import TeacherQAManagement from "./TeacherQAManagement";
